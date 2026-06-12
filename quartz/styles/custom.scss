@@ -1,3 +1,186 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// Reset .center grid behavior to stop layout breakage
+// Softer, museum-label corners for cards, popovers, and search bars
+.callout, .graph-view, .search, code, .popover, .desktop-only {
+  border-radius: 6px !important;
+}
+
+// Deepen the academic reading experience
+.article {
+  p, li {
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+    color: var(--dark);
+  }
+
+  // Gives a crisp, textbook weight to headings
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  
+  // Make emphasized text lean heavily into the gorgeous EB Garamond style
+  em {
+    font-family: "EB Garamond", serif;
+    font-size: 1.05em;
+  }
+}
+
+// Vintage-style link transitions (ink-black lines that glow green on hover)
+.article a {
+  text-decoration: none;
+  color: var(--darkgray);
+  border-bottom: 1px dashed var(--gray);
+  transition: all 0.25s ease-in-out;
+  
+  &:hover {
+    color: #8b9b7a !important; // Elegant botanical accent leaf color
+    border-bottom: 1px solid #8b9b7a;
+    background-color: var(--highlight);
+  }
+}
+
+// Style callout boxes to look like old manuscript excerpts or field logs
+.callout {
+  border-left: 3px solid var(--gray) !important;
+  background-color: var(--lightgray) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+// Dim down the interactive graph border to keep it subtle
+.graph-view {
+  border: 1px solid var(--lightgray);
+}
+::selection {
+  background: rgba(212, 163, 89, 0.25) !important; /* Soft antique amber */
+  color: var(--darkgray) !important;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--light); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--lightgray); 
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--gray); /* Brightens slightly on hover */
+  }
+}
+
+
+.popover {
+  background-color: var(--lightgray) !important;
+  border: 1px solid var(--gray) !important;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(4px); /* Subtle glassmorphism backdrop */
+  padding: 1rem !important;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gray), transparent);
+  margin: 2rem 0;
+  opacity: 0.5;
+}
+
+code {
+  font-size: 0.85em;
+  background: var(--lightgray) !important;
+  color: #a3b19b !important; /* Soft mossy green text for code */
+  padding: 0.15rem 0.4rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.katex-display {
+  background: rgba(255, 255, 255, 0.015) !important;
+  padding: 1.2rem !important;
+  border-radius: 6px;
+  border-left: 2px solid var(--gray);
+  margin: 1.5rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+header h1 {
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1.5rem;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, var(--gray), transparent);
+  }
+}
+
+.contains-task-list {
+  list-style: none;
+  padding-left: 1rem;
+  
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--gray);
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-right: 8px;
+    vertical-align: middle;
+    
+    &:checked {
+      background: var(--highlight);
+      border-color: #8b9b7a; // Your botanical leaf accent
+      
+      &:after {
+        content: "✓";
+        position: absolute;
+        top: -4px;
+        left: 2px;
+        font-size: 11px;
+        color: #8b9b7a;
+        font-family: serif;
+      }
+    }
+  }
+}
+
+// Apply a tactical, mechanical glide to all transitions
+a, .folder-outer, .popover, button, .search, .explorer {
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.backlinks {
+  border-top: 1px dashed var(--lightgray);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  
+  h3 {
+    font-size: 0.95rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+  }
+  
+  ul {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+}

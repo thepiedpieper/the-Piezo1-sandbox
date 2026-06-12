@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "my digital garden",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,32 +23,28 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "EB Garamond",     // A magnificent, vintage academic serif for titles
+        body: "Source Serif 4",              // A beautiful, highly readable literary serif for note text
+        code: "JetBrains Mono",    // Clean, crisp monospace for technical terms
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#fbf9f4",        // Warm parchment/antique paper
+          lightgray: "#e8e4d8",    // Faded book-binding edge
+          gray: "#8c8573",         // Aged iron-gall ink / sepia gray
+          dark: "#2e2b24",         // Deep roasted-coffee black for text
+          darkgray: "#1c1a16",     // Midnight ink for prominent headers
+          highlight: "rgba(107, 120, 95, 0.12)", // Faded pressed-leaf green
+          textHighlight: "#f3dfa2", // Antique gold-leaf highlight
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#121511",        // Deep, moody forest charcoal / velvet moss
+          lightgray: "#222720",    // Muted spruce / dark soil border
+          gray: "#b3eb97",         // Sage-tinted slate for meta text
+          dark: "#a5ffaec9",         // Soft alabaster / aged bone text
+          darkgray: "#fff0b9",     // Warm cream for crisp, striking headers
+          highlight: "rgba(122, 140, 105, 0.18)", // Elegant botanical olive highlight
+          textHighlight: "rgba(212, 163, 89, 0.25)", // Warm burnished amber
         },
       },
     },
