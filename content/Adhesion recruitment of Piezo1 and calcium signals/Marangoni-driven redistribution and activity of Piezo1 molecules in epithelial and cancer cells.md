@@ -10,7 +10,7 @@ In mesenchymal cells, Piezo1 interacts with focal adhesions, while in epithelial
 Cancer cells are more contractile, yet have no Piezo1 clustering.However, the overall activity of Piezo1 molecules is higher in cancer cells.
 
 
-**Marangoni number**
+**Marangoni number**:
 
 $$M_a=\frac{Δγ_m/L}{η_aD_a/L^2}=\frac{Δγ_mL}{η_aD_a}$$​
 
